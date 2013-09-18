@@ -1,0 +1,17 @@
+extends layout
+block content
+  if success
+    h1
+      = title
+    p
+      img(src = thumb)
+    
+    p
+      audio(controls)
+        source(src="/convert?url=" + yt_url type="audio/mpeg")
+        Your browser does not support the audio element.
+
+    p
+      a(href="/convert?url=" + yt_url) Download MP3
+  else
+    h1 Error loading #{yt_url}

@@ -1,0 +1,16 @@
+!!! 5
+html(lang="en")
+  head
+    title= pageTitle
+    script(type='text/javascript').
+      if (foo) {
+         bar(1 + 5)
+      }
+  body
+    h1 YouTube -> MP3
+    #container
+      form(action="/play" method="get")
+        input(type="text_field" name="url" size="75" value=yt_url)
+        input(type="submit" value="Convert")
+      hr
+      block content
